@@ -1,10 +1,18 @@
 package fr.iutvalence.info.dut.m3105.pattern.state;
 
 
-public class TrafficSignal extends Thread implements TrafficSignalContext, TrafficSignalUserInterface
+public class TrafficSignal extends Thread implements TrafficSignalContext, TrafficSignalButtonObserver
 {
+	
 	private TrafficSignalState state;
 
+	public TrafficSignal(TrafficSignalObserver trafficSignalOberserver)
+	{
+		
+	}
+	
+	
+	
 	@Override
 	public void setTrafficSignalState(TrafficSignalState state)
 	{
@@ -17,6 +25,7 @@ public class TrafficSignal extends Thread implements TrafficSignalContext, Traff
 	{
 		this.state.buttonPressed();
 	}
+	
 	
 	public void run()
 	{

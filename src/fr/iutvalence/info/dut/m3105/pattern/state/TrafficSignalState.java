@@ -5,9 +5,9 @@ public abstract class TrafficSignalState
 {
 	protected final TrafficSignalContext context;
 	protected int durationInSeconds;
-	private final TrafficSignalStateName name;
+	private final TrafficSignalColor name;
 	
-	public TrafficSignalState(TrafficSignalContext context, int durationInSeconds, TrafficSignalStateName name)
+	public TrafficSignalState(TrafficSignalContext context, int durationInSeconds, TrafficSignalColor name)
 	{
 		super();
 		this.context = context;
@@ -26,7 +26,7 @@ public abstract class TrafficSignalState
 		System.out.println(this.durationInSeconds);
 	}
 
-	public TrafficSignalStateName getName()
+	public TrafficSignalColor getName()
 	{
 		return this.name;
 	}
